@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bible Reader</title>
+  <link rel="stylesheet" href="script.css">
+  <meta name="description" content="Bible reader using scripture.api.bible" />
+</head>
+<body>
+  <header class="top">
+    <h1>📖 Bible Reader</h1>
+    <div class="controls">
+      <label class="small">API Key
+        <input id="apiKeyInput" placeholder="Paste API key (optional)" />
+      </label>
+      <label class="small">Bible ID
+        <input id="bibleIdInput" placeholder="de4e12af7f28f599-02" />
+      </label>
+      <button id="darkToggle" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <section class="left">
+      <div class="row">
+        <label>Book
+          <select id="bookSelect"><option>Loading...</option></select>
+        </label>
+
+        <label>Chapter
+          <select id="chapterSelect"><option>Loading...</option></select>
+        </label>
+
+        <label>Verse
+          <select id="verseSelect"><option>Loading...</option></select>
+        </label>
+
+        <button id="showVerseBtn">Show Verse</button>
+      </div>
+
+      <div class="row search-row">
+        <input id="searchInput" placeholder="Search keyword (love, faith...)" />
+        <button id="searchBtn">Search</button>
+        <button id="dailyVerseBtn">Random Verse</button>
+      </div>
+
+      <div class="row small muted">
+        
+      </div>
+    </section>
+
+    <section class="right">
+      <div id="verseDisplay" class="verse">Select a book, chapter and verse or search.</div>
+      <div class="actions">
+        <button id="readBtn">🔊 Read Aloud</button>
+        <button id="copyBtn">📋 Copy</button>
+      </div>
+      <div id="searchResults" class="results"></div>
+    </section>
+  </main>
+
+  <footer class="foot">Powered by scripture.api.bible</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
